@@ -10,12 +10,12 @@ const natural = require("natural");
 // });
 
 const dbConfig = {
-    user: "postgres",
+	user: "postgres",
 	host: "192.168.1.93",
 	database: "Training",
 	password: "mawai123",
 	port: 5432,
-  };
+};
 
 // client
 // 	.connect()
@@ -33,14 +33,13 @@ classifier.train();
 // Function to process user query
 async function processUserQuery(userQuery) {
 	try {
-
 		// Use NLP library to extract intent
 		const intent = classifier.classify(userQuery);
-        console.log(intent);
+		console.log(intent);
 
 		// Generate SQL query based on intent
 		const sqlQuery = generateSQLQuery(intent);
-        console.log(sqlQuery);
+		console.log(sqlQuery);
 
 		// Connect to the database
 		const pool = new Pool(dbConfig);

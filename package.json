@@ -11,6 +11,7 @@
   "dependencies": {
     "langchain": "^0.1.25",
     "natural": "^6.10.5",
+    "node-nlp": "^4.27.0",
     "pg": "^8.11.3"
   }
 }
